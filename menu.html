@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego Espacial</title>
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
+    <div class="contenedor-apartado-menu">
+      <div id="imagen-reproducir-musica" class="imagen-reproducir-musica">
+        <img
+          src="./assets/sin-sonido.png"
+          alt="imagen para reproducir la música espacial de menú"
+        />
+        <audio id="musica" class="musica" loop>
+          <source src="./musica/musica-espacial.mp3" type="audio/mp3" />
+        </audio>
+      </div>
+      <div class="contenedor-menu">
+        <h1 class="titulo-juego">juego espacial</h1>
+        <button
+          id="boton-inicio-juego"
+          type="button"
+          class="boton-inicio-juego"
+        >
+          Jugar
+        </button>
+      </div>
+    </div>
+    <script async defer src="menu.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+         document.getElementById("boton-inicio-juego").addEventListener("click", function(){
+          window.location.href = "index.html";
+      });
+    });
+    </script>
+  </body>
+</html>
