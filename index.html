@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juego Espacial</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script async defer src="app.js"></script> -->
   </head>
   <body>
-    <canvas id="canvas" width="1024" height="768"></canvas>
-    <div id="contenedor-modal" class="contenedor-modal" style="display: none">
-      <div id="contenido-modal" class="contenido-modal">
-        <p id="mensaje-puntuacion" class="mensaje-puntuacion">Puntos totales: </p>
-        <p id="vidas-restantes" class="vidas-restantes">Vidas restantes: </p>
-        <button id="cerrar-modal" class="cerrar-modal">X</button>
+    <div class="contenedor-apartado-menu">
+      <div id="imagen-reproducir-musica" class="imagen-reproducir-musica">
+        <img
+          src="./assets/sin-sonido.png"
+          alt="imagen para reproducir la música espacial de menú"
+        />
+        <audio id="musica" class="musica" loop>
+          <source src="./musica/musica-espacial.mp3" type="audio/mp3" />
+        </audio>
       </div>
-    </div>
-    <div class="contenedor-regresar-menu">
-      <button id="boton-regresar-menu" class="boton-regresar-menu">
-        Regresar
-      </button>
+      <div class="contenedor-menu">
+        <h1 class="titulo-juego">juego espacial</h1>
+        <button
+          id="boton-inicio-juego"
+          type="button"
+          class="boton-inicio-juego"
+        >
+          Jugar
+        </button>
+      </div>
     </div>
     <script async defer src="app.js"></script>
     <script>
-      document
-        .getElementById("boton-regresar-menu")
-        .addEventListener("click", function () {
-          window.location.href = "menu.html";
-        });
+        document.addEventListener("DOMContentLoaded", function () {
+         document.getElementById("boton-inicio-juego").addEventListener("click", function(){
+          window.location.href = "juego.html";
+      });
+    });
     </script>
   </body>
 </html>
+

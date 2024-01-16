@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego Espacial</title>
+    <link rel="stylesheet" href="juego.css" />
+  </head>
+  <body>
+    <canvas id="canvas" width="1024" height="768"></canvas>
+    <div id="contenedor-modal" class="contenedor-modal" style="display: none">
+      <div id="contenido-modal" class="contenido-modal">
+        <p id="mensaje-puntuacion" class="mensaje-puntuacion">Puntos totales: </p>
+        <p id="vidas-restantes" class="vidas-restantes">Vidas restantes: </p>
+        <button id="cerrar-modal" class="cerrar-modal">X</button>
+      </div>
+    </div>
+    <div class="contenedor-regresar-menu">
+      <button id="boton-regresar-menu" class="boton-regresar-menu">
+        Regresar
+      </button>
+    </div>
+    <script async defer src="juego.js"></script>
+    <script>
+      document
+        .getElementById("boton-regresar-menu")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>
